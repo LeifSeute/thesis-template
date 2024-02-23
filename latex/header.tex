@@ -1,0 +1,123 @@
+%\usepackage{listings,booktabs,color,nicefrac,setspace,xltxtra,yfonts,hyperref}
+\usepackage{classicthesis}
+\PassOptionsToPackage{eulerchapternumbers,beramono,listings,  subfig,floatperchapter,pdfspacing}{classicthesis}
+% Available options: drafting parts nochapters linedheaders eulerchapternumbers beramono eulermath pdfspacing minionprospacing tocaligned dottedtoc manychapters listings floatperchapter subfig
+
+\PassOptionsToPackage{T1}{fontenc} % T2A for cyrillics
+\usepackage{fontenc}
+\usepackage{amsthm}
+\usepackage{dsfont}
+\usepackage{graphicx}
+\usepackage[english]{babel}
+\usepackage[shortlabels]{enumitem}
+\usepackage{tikz}
+\usetikzlibrary{calc, positioning, shapes.geometric, arrows.meta, backgrounds}
+
+\usepackage{multirow, booktabs, siunitx}
+
+% \usepackage{xcolor}
+% \usepackage[acronym]{glossaries}
+% \renewcommand{\acrshort}[1]{\hyperlink{\glsentryanchor{#1}}{\textcolor{gray}{\glsentryshort{#1}}}}
+
+\usepackage{subcaption}
+\captionsetup[subfigure]{skip=5pt}
+
+\usepackage{amsmath, amsfonts, amssymb, amsthm}
+\usepackage{bm}
+
+\usepackage[square,numbers]{natbib}
+\bibliographystyle{abbrvnat}
+
+\newcommand{\de}{\mathrm{d}}
+\newcommand{\Chi}{\text{$\boldsymbol{\chi}$}}
+\newcommand{\DELTA}{\text{$\boldsymbol{\delta}$}}
+
+\newtheorem{Theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{Definition}{Definition}
+
+%\usepackage{kpfonts}
+%\setmainfont[Mapping=tex-text]{Linux Libertine O}
+%\setsansfont[Mapping=tex-text]{Linux Biolinum O}
+
+
+\PassOptionsToPackage{hyperfootnotes=false,pdfpagelabels}{hyperref}
+\usepackage{hyperref}  % backref linktocpage pagebackref
+%\pdfcompresslevel=9
+%\pdfadjustspacing=1
+
+\definecolor{dark_gray}{rgb}{0.3, 0.3, 0.3}
+
+\hypersetup{
+	% Uncomment the line below to remove all links (to references, figures, tables, etc), useful for b/w printouts
+	%draft,
+	colorlinks=true, linktocpage=true, pdfstartpage=3, pdfstartview=FitV,
+	% Uncomment the line below if you want to have black links (e.g. for printing black and white)
+	%colorlinks=false, linktocpage=false, pdfborder={0 0 0}, pdfstartpage=3, pdfstartview=FitV,
+	breaklinks=true, pdfpagemode=UseNone, pageanchor=true, pdfpagemode=UseOutlines,%
+	plainpages=false, bookmarksnumbered, bookmarksopen=true, bookmarksopenlevel=1,%
+%	hypertexnames=true,
+	pdfhighlight=/O,%nesting=true,%frenchlinks,%
+	urlcolor=webbrown, linkcolor=dark_gray, citecolor=webgreen, %pagecolor=RoyalBlue,%
+	%urlcolor=Black, linkcolor=Black, citecolor=Black, %pagecolor=Black,%
+	%------------------------------------------------
+	% PDF file meta-information
+	pdftitle={Title},
+	pdfauthor={\textcopyright\ Leif Seute, University of Heidelberg, Department of Physics and Astronomy},
+	pdfsubject={},
+	pdfkeywords={},
+	pdfcreator={XeLaTeX},
+	pdfproducer={LaTeX with hyperref and classicthesis}
+	%------------------------------------------------
+}
+
+
+\usepackage{textcomp} % Fix warning with missing font shapes
+
+%------------------------------------------------
+
+\usepackage{scrhack} % Fix warnings when using KOMA with listings package
+
+
+\usepackage{xspace} % To get the spacing after macros right
+
+%------------------------------------------------
+
+\usepackage{mparhack} % To get marginpar right
+
+%------------------------------------------------
+
+\usepackage{fixltx2e} % Fixes some LaTeX stuff
+
+\usepackage{tabularx} % Better tables
+\setlength{\extrarowheight}{3pt} % Increase table row height
+\newcommand{\tableheadline}[1]{\multicolumn{1}{c}{\spacedlowsmallcaps{#1}}}
+\newcommand{\myfloatalign}{\centering} % To be used with each float for alignment
+\usepackage{caption}
+\captionsetup{font=small}
+
+\usepackage{listings}
+%\lstset{emph={trueIndex,root},emphstyle=\color{BlueViolet}}%\underbar} % For special keywords
+\lstset{language=[LaTeX]Tex,%C++ % Specify the language(s) for listings here
+	morekeywords={PassOptionsToPackage,selectlanguage},
+	keywordstyle=\color{RoyalBlue}, % Add \bfseries for bold
+	basicstyle=\small\ttfamily, % Makes listings a smaller font size and a different font
+	%identifierstyle=\color{NavyBlue}, % Color of text inside brackets
+	commentstyle=\color{Green}\ttfamily, % Color of comments
+	stringstyle=\rmfamily, % Font type to use for strings
+	numbers=left, % Change left to none to remove line numbers
+	numberstyle=\scriptsize, % Font size of the line numbers
+	stepnumber=5, % Increment of line numbers
+	numbersep=8pt, % Distance of line numbers from code listing
+	showstringspaces=false, % Sets whether spaces in strings should appear underlined
+	breaklines=true, % Force the code to stay in the confines of the listing box
+	%frameround=ftff, % Uncomment for rounded frame
+	%frame=single, % Frame border - none/leftline/topline/bottomline/lines/single/shadowbox/L
+	belowcaptionskip=.75\baselineskip % Space after the "Listing #: Desciption" text and the listing box
+}
+
+\usepackage[utf8]{inputenc}
+\usepackage[acronym]{glossaries}
+
+\usepackage{lipsum}
